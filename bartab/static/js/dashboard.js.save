@@ -1,0 +1,10 @@
+function drinkSubmit()
+{
+  var request = new XMLHttpRequest();
+  var str = "/barTab/submit.php?name=" + nameValue + "&price=" + priceValue;
+  request.open("GET", str, true);
+  request.send(null);
+  clearSection();
+//  return request.responseText;
+}
+

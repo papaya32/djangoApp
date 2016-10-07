@@ -1,0 +1,18 @@
+{% extends "bartab/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <div class="row" style="padding-left:15px">
+  {% for user in users %}
+    <a href="javascript:userSelect('{{ user.name }}');" class="box red col-sm-1"><img src='{% static 'assets/' %}{{ user.icon }}' width="110" height="110" border="0"/><h2>{{ user.name }}</h2></a>    
+  {% endfor %}
+
+  {% for item in items %}
+    <a href="javascript:drinkSelect('{{ item.name }}', '{{ item.price }}');" class="box blue col-sm-1"><img src='{% static 'assets/' %}{{ item.icon  }}' width="110" height="110" border="0"/><h2>{{ item.name }}- ${{ item.price }}</h2></a>
+  {% endfor %}
+  </div>
+
+  <div class="row" style="padding-left:15px">
+    <h3 id="name"></h3><a href="javascript:drinkSubmit();" id="submitButton" class="buttonGreen" style="display:none">Submit</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PapI 2016</title>
+  <meta charset="utf-8" />
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" type="text/css" />
+  <script src="{% static 'js/bartab.js' %}"></script>
+</head>
+
+<body class="body" style="background-color: #6666FF; margin: 25px;">
+  <div>
+
+  <div class="row">
+    <div class="col-sm-6"><h1Title>Bar Tab Dashboard</h1Title></div>
+    <div class="col-sm-6"><h2Title><span class="pull-right">906 Rose St.</span></h2Title></div>
+  </div>
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>
